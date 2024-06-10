@@ -1,0 +1,92 @@
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow when sticky */
+    z-index: 1000; /* Ensure the header is above other content */
+  }
+
+  
+
+  .header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0; 
+    width: 100%;
+    background-color: #ffffff; 
+    transition: all 0.3s ease;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+  
+  .tabs h3 {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .tabs h3.active {
+    font-weight: bold;
+    color: darkblue;
+    position: relative;
+  }
+  
+  .tabs h3.active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: darkblue;
+  }
+  
+  .rectangular-button {
+    padding: 10px 20px;
+    border: none;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.8%;
+  }
+  
+  .rectangular-button.enabled {
+    background-color: darkblue;
+    color: white;
+  }
+  
+  .rectangular-button:disabled {
+    background-color: #ccc;
+    color: white;
+    cursor: not-allowed;
+  }
+  
+
+
+ 
+  
+  /* Media Query for smaller screens */
+  @media screen and (max-width: 768px) {
+
+    .tabs {
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+
+        font-size: x-small;
+      }
+
+      .rectangular-button{
+        width: 80px;
+      }
+
+
+
+  }
+  
